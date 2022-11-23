@@ -1,0 +1,9 @@
+{{page-title "Shop"}}
+{{outlet}}
+
+First customer is: {{@model.customers.firstObject.name}}
+
+Number of sales: {{@model.sales}}
+
+<CustomerList @shop={{@model}} />
+

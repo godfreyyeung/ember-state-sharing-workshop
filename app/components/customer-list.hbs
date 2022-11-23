@@ -1,0 +1,7 @@
+{{yield}}
+
+wellp {{@shop.sales}}
+{{#each @shop.customers as |customer|}}
+  hi
+  <CustomerPanel @shop={{@shop}} />
+{{/each}}

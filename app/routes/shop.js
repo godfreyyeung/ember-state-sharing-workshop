@@ -1,8 +1,11 @@
 import Route from '@ember/routing/route';
+import { service } from "@ember/service";
 
 export default class ShopRoute extends Route {
-  async model() {
-    const myShop = {
+  @service store;
+
+  async model(params) {
+    const myShop = this.store.createRecord('shop', {
       sales: 0,
       customers: [
         {
@@ -10,16 +13,11 @@ export default class ShopRoute extends Route {
           name: 'bob',
         },
         {
-          id: 1,
+          id: 2,
           name: 'susan',
         }
       ],
-    };
-
-    myShop.addSale = () => {
-      console.log("mauahha", myShop.sales);
-      myShop.sales = myShop.sales + 1;
-    }
+    });
 
     return myShop;
   }

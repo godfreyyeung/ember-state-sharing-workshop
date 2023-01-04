@@ -1,5 +1,5 @@
 import Route from '@ember/routing/route';
-import { service } from "@ember/service";
+import { service } from '@ember/service';
 
 export default class ShopRoute extends Route {
   @service store;
@@ -15,7 +15,7 @@ export default class ShopRoute extends Route {
         {
           id: 2,
           name: 'susan',
-        }
+        },
       ],
     });
 
